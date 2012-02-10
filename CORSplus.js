@@ -25,6 +25,7 @@
 
 	var hcUrl = '//your.domain.com/', //your CORS-y resource here
 		maxUrlLength = 2000,  //2000 characters is probably safe. set lower to force it to batch things for testing purposes
+		
 	hashC ={
 			timeout: 10000, 
 			cors: $.support.cors, //so we know from the start if the client can do CORS
