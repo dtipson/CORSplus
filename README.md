@@ -9,6 +9,6 @@ This entire approach is aimed at tasks that involve reading/updating massive num
 Requirements: jQuery 1.6+, JSON (native or polyfilled)
 
 Known limitations: 
-	*still fixing IE XDomain support (was working before, needs to be refactored to current approach).
-	*doesn't currently check for ids/values that are too long, all by themselves, to fit into a single JSONP uri
-	*every browser using the XDomainRequest method (all IEs prior to what's proposed for 10) has a number of additional, annoying restrictions: http://blogs.msdn.com/b/ieinternals/archive/2010/05/13/xdomainrequest-restrictions-limitations-and-workarounds.aspx
+*still fixing IE XDomain support (was working before, needs to be refactored to current approach).
+*doesn't currently check for ids/values that are too long, all by themselves, to fit into a single JSONP uri
+*every browser using the XDomainRequest method (all IEs prior to what's proposed for 10) has a number of additional, annoying restrictions: http://blogs.msdn.com/b/ieinternals/archive/2010/05/13/xdomainrequest-restrictions-limitations-and-workarounds.aspx
