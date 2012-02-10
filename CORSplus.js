@@ -27,7 +27,7 @@ var hcUrl = '//your.domain.com/', //your CORS-y resource here
 	maxUrlLength = 2000,  //2000 characters is probably safe. set lower to force it to batch things for testing purposes
 	hashC ={
           timeout: 10000, 
-          cors: false, //$.support.cors, //so we know from the start if the client can do CORS
+          cors: $.support.cors, //so we know from the start if the client can do CORS
           buildQS: function (q,postm){
             q.ids = q.ids||[]; //if no ids were passed, don't cause an error
             /*now build a standard query from the paramaters we got*/
