@@ -49,7 +49,7 @@ var hcUrl = '//your.domain.com/', //your CORS-y resource here
             var xdr = $.Deferred(),  //master Deferred
             msdf, //for IE
             url = this.buildQS(q,true), //convert the original function parameters into a standard query
-            data = {'ids': q.ids.join("|")}; 
+            data = {'ids': q.ids.join("|")}; //turn id data into an object
             
             if(!this.cors){ //no cors support: use jsonp
 				return hashC.rwJSONP(q); //return the promise from the jsonp request
