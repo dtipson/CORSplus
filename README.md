@@ -9,6 +9,7 @@ Requirements: jQuery 1.6+, JSON (native or [polyfilled](https://github.com/dougl
 
 Known limitations: 
 -----------
+*	release quality?  No. Will finish once I've run through testing all the methods now that it's been re-worked.
 *	still fixing IE XDomain support method (was working before, needs to be refactored to current approach).
 *	need to add result filter to all methods (mainly the IE method)
 *	for backup method, the function doesn't currently check for ids/values that are too long, all by themselves, to fit into a single JSONP uri. These will fail, probably horribly. So stick to short keys/values that can at least fit into a single request.
