@@ -123,7 +123,7 @@ var hcUrl = '//your.domain.com/', //your CORS-y resource here
           batchIt: function(q){
             var b = $.Deferred(), //the master promise we'll eventually return
               batches = [], //collection of requests, each of which will be a promise
-              per=3, //rough idea of how many ids to send at once
+              per=30, //rough idea of how many ids to send at once
               nq, // variable to hold each new query string
               nids=[]; //array to hold a growing list of ids, emptied for each new batch
            
