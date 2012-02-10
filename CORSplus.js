@@ -48,7 +48,8 @@ var hcUrl = '//your.domain.com/', //your CORS-y resource here
           xpost: function (q) { //master wrapping function, handles CORS request via a Deferred, or falls back to a batch request
             var xdr = $.Deferred(),  //master Deferred
             msdf, //for IE
-            url = this.buildQS(q,true); //convert the original function parameters into a standard query
+            url = this.buildQS(q,true), //convert the original function parameters into a standard query
+            data = {'ids': q.ids.join("|")}; 
             
             if(!this.cors){ //no cors support: use jsonp
 				return hashC.rwJSONP(q); //return the promise from the jsonp request
@@ -71,7 +72,7 @@ var hcUrl = '//your.domain.com/', //your CORS-y resource here
                 xdr = this.pipeFilter($.ajax({ //basic ajax request for modern browsers
                     "url": url,
                     type: "POST",
-                    "data": {'ids': q.ids.join("|")},
+                    "data": data,
                     dataType: "json"
                 }),q);
             }
