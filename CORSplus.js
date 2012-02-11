@@ -61,7 +61,7 @@
 				return hashC.rwJSONP(q); //return the promise object from the jsonp request
 			}
 			else if ($.browser.msie && window.XDomainRequest) {  //handle that "edge" case, IE
-				msdf = new XDomainRequest(); //even Microsft eventually decided that this was stupid, but we're still stuck with this
+				msdf = new XDomainRequest(); //even Microsoft eventually decided that this was stupid, but we're still stuck with this
 				msdf.open("post", url); //open the gates of stupid
 				msdf.onprogress = function() {}; //f-ing IE9 requires this, for no good reason
 				msdf.onload = function () {
